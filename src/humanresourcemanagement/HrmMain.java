@@ -1,5 +1,6 @@
+package humanresourcemanagement;
 
-public class main {
+public class HrmMain {
 	
 	public static void main(String[] args) 
 	{
