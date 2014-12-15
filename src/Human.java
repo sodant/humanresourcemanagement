@@ -12,9 +12,9 @@ public class Human {
 	private Gender gender;
 	
 	private LocalDateTime birthDate;
-	
-	
-	public void Render(){
+		
+		
+	public void Render(/** **/){
 		//presentation?
 	}
 	
