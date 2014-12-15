@@ -22,6 +22,5 @@ public class HumanTest {
 	public void initializeTest() 
 	{	
 		assertEquals(true, true);
-	}
-	
+	}		
 }
