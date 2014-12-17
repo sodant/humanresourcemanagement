@@ -1,9 +1,11 @@
 package humanresourcemanagement.unittests;
 
 import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
-import humanresourcemanagement.Human;
+
+import humanresourcemanagement.humans.Human;
 
 public class HumanTest {
 	
@@ -11,7 +13,7 @@ public class HumanTest {
 	@Before
 	public void initialize()
 	{
-		testSubject = new Human();
+		//testSubject = new Human();
 		
 	}
 	
