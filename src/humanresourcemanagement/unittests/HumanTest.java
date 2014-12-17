@@ -5,8 +5,12 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+<<<<<<< HEAD
 import humanresourcemanagement.Human;
 import humanresourcemanagement.Human.Gender;
+=======
+import humanresourcemanagement.humans.Human;
+
 
 public class HumanTest {
 	
@@ -15,7 +19,6 @@ public class HumanTest {
 	@Before
 	public void initialize()
 	{
-		testSubject = new Human("Mick", "Soudant", 23, Gender.MALE);		
 	}
 	
 	@Test
