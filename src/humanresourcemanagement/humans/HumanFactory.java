@@ -10,7 +10,7 @@ public class HumanFactory {
 			return factory;
 		}
 	}
-	public void createHuman(HumanType type) {
+	public void createHuman(/**HumanType type**/) {
 		System.out.println("test");
 	}
 }
