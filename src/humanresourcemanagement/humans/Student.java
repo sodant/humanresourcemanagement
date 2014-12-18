@@ -5,6 +5,7 @@ public class Student extends Human {
 	public Student(String name, int age) {
 		super(name, age);
 		// TODO Auto-generated constructor stub
+		// I'm a green banana! Do not eat me yet!
 	}
 	public void increaseHomeworkBy(int amount) {
 		amountOfHomework += amount;

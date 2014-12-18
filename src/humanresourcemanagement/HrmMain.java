@@ -2,6 +2,7 @@ package humanresourcemanagement;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
@@ -10,23 +11,22 @@ import humanresourcemanagement.humans.Student;
 import humanresourcemanagement.humans.Human;
 
 public class HrmMain {
-	private ArrayList<Human> allHumans = new ArrayList<Human>();
+
+	public static void main(String[] args) 
+	{
+		HrmMain m = new HrmMain();
+		//m.execute();
+	}	
+	
+	private List<Human> allHumans = new ArrayList<Human>();
 	private Predicate<Human> 	isStudent = (h) -> h instanceof Student,
 								isOlderThan18 = (h) -> h.age > 18;
 	private Comparator<Human> 	byAge = (h1, h2) -> h1.age - h2.age,
 								byName = (h1, h2) -> h1.name.compareTo(h2.name);
 	private Consumer<Human> 	print = (h) -> h.print();
-	public static void main(String[] args) 
-	{
-		HrmMain m = new HrmMain();
-		m.execute();
-	}
+	
 	private void execute() {
-		allHumans.add(new Student("Rachèl", 23));
-		allHumans.add(new Student("Mick", 20));
-		allHumans.add(new Student("Lexy", 34));
-		allHumans.add(new Student("Sars", 33));
-		allHumans.add(new Student("Jenny", 19));
+
 		
 		
 		//Stream<Human> filtered = allHumans.stream().filter((s) -> s.age < 15);
