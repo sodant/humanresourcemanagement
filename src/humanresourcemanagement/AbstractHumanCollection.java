@@ -4,6 +4,7 @@ import humanresourcemanagement.data.IHumanDataAdapter;
 import humanresourcemanagement.humans.Human;
 import humanresourcemanagement.humans.Student;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -27,5 +28,7 @@ public abstract class AbstractHumanCollection {
 	public abstract List<Human> getAllStudents();
 	
 	public abstract List<Human> getAllStudentOlderThanEighteen();
+
+	public abstract List<Human> getAllHumansBornBeforeDateTimeWithLambdas(LocalDate date);
 
 }

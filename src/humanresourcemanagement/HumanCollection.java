@@ -4,6 +4,9 @@ import humanresourcemanagement.data.IHumanDataAdapter;
 import humanresourcemanagement.humans.Human;
 import humanresourcemanagement.humans.Student;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDate;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
@@ -31,22 +34,27 @@ public class HumanCollection extends AbstractHumanCollection {
 				.sorted(byAge)
 				.collect(Collectors.toList());
 	}
-	
+
 	public List<Human> getAllStudents(){
-		
+
 		return this.humans.stream()
 				.filter(isStudent)
-				.collect(Collectors.toList()); 						
-	}	
-	
+				.collect(Collectors.toList());
+	}
+
 	public List<Human> getAllStudentOlderThanEighteen(){
-		
+
 		return this.humans.stream()
 				.filter(isStudent.and(isOlderThan18))
-				.collect(Collectors.toList()); 				
+				.collect(Collectors.toList());
 	}
-	
-	
-	
-	
+
+
+	public List<Human> getAllHumansBornBeforeDateTimeWithLambdas(LocalDate date) {
+		return this.humans.stream()
+				.filter(a -> a.birthDate.isBefore(date))
+						.collect(Collectors.toList());
+	}
+
+
 }

@@ -1,5 +1,7 @@
 package humanresourcemanagement;
 
+import java.lang.reflect.Array;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -7,16 +9,25 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
+import humanresourcemanagement.data.HumanMockAdapter;
 import humanresourcemanagement.humans.Student;
 import humanresourcemanagement.humans.Human;
 
 public class HrmMain {
 
+	private HumanCollection humans;
+
 	public static void main(String[] args) 
 	{
 		HrmMain m = new HrmMain();
-		//m.execute();
-	}	
+		m.execute();
+	}
+
+	public HrmMain(){
+		HumanMockAdapter dataSource = new HumanMockAdapter();
+		this.humans = new HumanCollection(dataSource);
+	}
+
 	
 	private List<Human> allHumans = new ArrayList<Human>();
 	private Predicate<Human> 	isStudent = (h) -> h instanceof Student,
@@ -73,12 +84,19 @@ public class HrmMain {
 		
 		Comparator<Student> byMostHomework = (s1, s2) -> s2.amountOfHomework - s1.amountOfHomework;
 		
+/*
 		final int highestAmountOfHomework = studentsAbove18.stream().sorted(byMostHomework).findFirst().get().amountOfHomework;
 		Predicate<Student> isALoser = (s) -> s.amountOfHomework == highestAmountOfHomework;
 		Consumer<Student> printLoser = (s) -> System.out.println(s.name + " is a loser");
 		
 		System.out.println("The highest amount of homework is " + highestAmountOfHomework);
 		studentsAbove18.stream().filter(isALoser).forEach(printLoser);
+*/
+
+		ArrayList<Human> filteredHumans = (ArrayList) this.humans.getAllHumansBornBeforeDateTimeWithLambdas(LocalDate.of(1994,02,2));
+		filteredHumans.forEach(print);
+
+
 	}
 	public int getRandom(int max) {
 		return (int) (Math.random() * max + 1);
