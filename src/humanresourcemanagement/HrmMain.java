@@ -1,13 +1,11 @@
 package humanresourcemanagement;
 
-import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 import humanresourcemanagement.data.HumanMockAdapter;
 import humanresourcemanagement.humans.Student;
@@ -29,7 +27,7 @@ public class HrmMain {
 	}
 
 	
-	private List<Human> allHumans = new ArrayList<Human>();
+	private List<Human> allHumans = new ArrayList<>();
 	private Predicate<Human> 	isStudent = (h) -> h instanceof Student,
 								isOlderThan18 = (h) -> h.age > 18;
 	private Comparator<Human> 	byAge = (h1, h2) -> h1.age - h2.age,
@@ -43,7 +41,7 @@ public class HrmMain {
 		//Stream<Human> filtered = allHumans.stream().filter((s) -> s.age < 15);
 		//filtered.forEach((h) -> h.print());
 		System.out.println("All----------");
-		allHumans.stream().forEach(print);;
+		allHumans.stream().forEach(print);
 		
 		System.out.println("\nSorted by name---------- ");
 		allHumans.stream().sorted(byName).forEach(print);
@@ -65,7 +63,7 @@ public class HrmMain {
 		
 		System.out.println("\nPrint students above 18 and store them in an ArrayList---------- ");
 		
-		ArrayList<Student> studentsAbove18 = new ArrayList<Student>();
+		ArrayList<Student> studentsAbove18 = new ArrayList<>();
 		Consumer<Human> saveStudent = (h) -> studentsAbove18.add((Student) h),
 						printStored = (h) -> System.out.println(h.name + " is stored");
 						
@@ -81,10 +79,10 @@ public class HrmMain {
 		System.out.println("\n");
 		studentsAbove18.forEach(increaseHomeworkByRandomAmount.andThen(showHomework));
 		System.out.println("\n");
-		
+/*
 		Comparator<Student> byMostHomework = (s1, s2) -> s2.amountOfHomework - s1.amountOfHomework;
 		
-/*
+
 		final int highestAmountOfHomework = studentsAbove18.stream().sorted(byMostHomework).findFirst().get().amountOfHomework;
 		Predicate<Student> isALoser = (s) -> s.amountOfHomework == highestAmountOfHomework;
 		Consumer<Student> printLoser = (s) -> System.out.println(s.name + " is a loser");

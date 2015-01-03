@@ -1,5 +1,6 @@
 package humanresourcemanagementdemo;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import humanresourcemanagement.AbstractHumanCollection;
@@ -37,4 +38,8 @@ public class WorkshopHumanCollection extends AbstractHumanCollection {
 		return null;
 	}
 
+	@Override
+	public List<Human> getAllHumansBornBeforeDateTimeWithLambdas(LocalDate date) {
+		return null;
+	}
 }
