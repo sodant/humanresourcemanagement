@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
  */
 public class HumanCollection extends AbstractHumanCollection {
 	
-	private Predicate<Human> 	isStudent = (h) -> h instanceof Student,
-								isOlderThan18 = (h) -> h.age > 18;
+	private Predicate<Human> 	isStudent = (h) -> h instanceof Student;
+	
 	private Comparator<Human> 	byAge = (h1, h2) -> h1.age - h2.age,
 								byName = (h1, h2) -> h1.name.compareTo(h2.name);
 
@@ -49,15 +49,20 @@ public class HumanCollection extends AbstractHumanCollection {
 				.collect(Collectors.toList());
 	}
 
-	public List<Human> getAllStudentOlderThanEighteen(){
+	public List<Human> getAllStudentOlderThanAge(int age){
 
 		return this.humans.stream()
-				.filter(isStudent.and(isOlderThan18))
+				.filter(isStudent.and((h) -> h.age > age))
 				.collect(Collectors.toList());
 	}
 
-
 	public List<Human> getAllHumansBornBeforeDateTimeWithLambdas(LocalDate date) {
+		return this.humans.stream()
+				.filter(a -> a.birthDate.isBefore(date))
+						.collect(Collectors.toList());
+	}
+	
+	public List<Human> addDayAbsentToStudents(LocalDate date) {
 		return this.humans.stream()
 				.filter(a -> a.birthDate.isBefore(date))
 						.collect(Collectors.toList());

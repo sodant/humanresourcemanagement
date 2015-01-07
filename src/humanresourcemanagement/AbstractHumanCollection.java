@@ -21,7 +21,7 @@ public abstract class AbstractHumanCollection {
 	
 	public abstract List<Human> getAllStudents();
 	
-	public abstract List<Human> getAllStudentOlderThanEighteen();
+	public abstract List<Human> getAllStudentOlderThanAge(int age);
 
 	public abstract List<Human> getAllHumansBornBeforeDateTimeWithLambdas(LocalDate date);
 

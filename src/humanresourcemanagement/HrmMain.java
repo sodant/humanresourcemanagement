@@ -70,14 +70,14 @@ public class HrmMain {
 		allHumans.stream().filter(isStudent.and(isOlderThan18)).sorted(byName).forEach(saveStudent.andThen(printStored));
 		System.out.println("\n");
 		
-		Consumer<Student> showHomework = (s) -> s.showHomework(),
-						  increaseHomeworkByRandomAmount = (s) -> s.increaseHomeworkBy(getRandom(10));
+		Consumer<Student> showHomework = (s) -> s.printDaysAbsent(),
+						  increaseDaysAbsentByRandomAmount = (s) -> s.increaseAmountOfDaysAbsent(getRandom(10));
 						  
-		studentsAbove18.forEach(increaseHomeworkByRandomAmount.andThen(showHomework));
+		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(showHomework));
 		System.out.println("\n");
-		studentsAbove18.forEach(increaseHomeworkByRandomAmount.andThen(showHomework));
+		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(showHomework));
 		System.out.println("\n");
-		studentsAbove18.forEach(increaseHomeworkByRandomAmount.andThen(showHomework));
+		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(showHomework));
 		System.out.println("\n");
 /*
 		Comparator<Student> byMostHomework = (s1, s2) -> s2.amountOfHomework - s1.amountOfHomework;
