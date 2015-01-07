@@ -19,7 +19,7 @@ import humanresourcemanagement.humans.Teacher;
 
 public class HumanXmlAdapter implements IHumanDataAdapter {
 
-	private XMLDocument xmlHumans;
+	private static XMLDocument xmlHumans;
 	
 	public HumanXmlAdapter(String filePath) {
 		File path = new File(filePath);

@@ -50,16 +50,16 @@
 	<human birthday="27-12-1966" name="Armand Largo"/>
 	<human birthday="19-11-1980" name="Raeann Pacheo"/>
 	<human birthday="02-02-1973" name="Long Fortunato" />
-	<student birthday="01-01-1991" name="Mats Boterlik" />  
-	<student birthday="22-01-1988" name="Steffen Chaque" />  
-	<student birthday="01-01-1976" name="Sjon Laffer" />  
-	<student birthday="01-01-1992" name="Piet Claassen" />  
-	<student birthday="01-01-1991" name="Kees Boterlik" />  
-	<student birthday="01-01-1994" name="Mats Boterlik" />  
-	<student birthday="01-01-1995" name="Laura Jansen" />  
-	<student birthday="01-01-1979" name="Lars Sral" />  
-	<student birthday="01-01-1987" name="Stam Jaap" />  
-	<student birthday="01-01-1992" name="Henk Meister" />  
+	<student birthday="01-01-1991" name="Mats Boterlik" daysAbsent="0" />  
+	<student birthday="22-01-1988" name="Steffen Chaque" daysAbsent="7" />  
+	<student birthday="01-01-1976" name="Sjon Laffer" daysAbsent="2" />  
+	<student birthday="01-01-1992" name="Piet Claassen" daysAbsent="5" />  
+	<student birthday="01-01-1991" name="Kees Boterlik" daysAbsent="0" />  
+	<student birthday="01-01-1994" name="Mats Boterlik" daysAbsent="11" />  
+	<student birthday="01-01-1995" name="Laura Jansen" daysAbsent="2" />  
+	<student birthday="01-01-1979" name="Lars Sral" daysAbsent="10" />  
+	<student birthday="01-01-1987" name="Stam Jaap" daysAbsent="15" />  
+	<student birthday="01-01-1992" name="Henk Meister" daysAbsent="7" />  
 	<teacher birthday="02-02-1972" name="Yi Yu" />
 	<teacher birthday="02-02-1943" name="Luna Atlantis" />
 	<teacher birthday="02-02-1967" name="Arie Banaan" />
