@@ -32,7 +32,7 @@ public class HumanCollectionTest {
 	
 	@Test
 	public void sortHumansByAgeTest(){
-		ArrayList<Human> humansSortedByAge = (ArrayList<Human>)testCollection.sortHumansByAge();
+		ArrayList<Human> humansSortedByAge = (ArrayList<Human>)testCollection.sortHumansByAgeWithFunctionalInterface();
 		//humansSortedByAge.forEach(h -> h.print());
 		assertEquals(true, true);
 	}
@@ -45,7 +45,7 @@ public class HumanCollectionTest {
 	
 	@Test
 	public void getAllStudentOlderThanEighteenTest(){
-		ArrayList<Human> allStudents = (ArrayList<Human>)testCollection.getAllStudentOlderThanEighteen();
+		ArrayList<Human> allStudents = (ArrayList<Human>)testCollection.getAllStudentOlderThanAge(18);
 		assertEquals(true, true);
 	}				
 }

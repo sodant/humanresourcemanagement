@@ -21,7 +21,7 @@ public class WorkshopHumanCollection extends AbstractHumanCollection {
 	}
 
 	@Override
-	public List<Human> sortHumansByAge() {
+	public List<Human> sortHumansByAgeWithFunctionalInterface() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -33,13 +33,16 @@ public class WorkshopHumanCollection extends AbstractHumanCollection {
 	}
 
 	@Override
-	public List<Human> getAllStudentOlderThanEighteen() {
+	public List<Human> getAllStudentOlderThanAge(int age) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public List<Human> getAllHumansBornBeforeDateTimeWithLambdas(LocalDate date) {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 }

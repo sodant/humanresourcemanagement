@@ -1,6 +1,5 @@
 package humanresourcemanagement;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -70,14 +69,14 @@ public class HrmMain {
 		allHumans.stream().filter(isStudent.and(isOlderThan18)).sorted(byName).forEach(saveStudent.andThen(printStored));
 		System.out.println("\n");
 		
-		Consumer<Student> showHomework = (s) -> s.printDaysAbsent(),
+		Consumer<Student> printDaysAbsent = (s) -> s.printDaysAbsent(),
 						  increaseDaysAbsentByRandomAmount = (s) -> s.increaseAmountOfDaysAbsent(getRandom(10));
 						  
-		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(showHomework));
+		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(printDaysAbsent));
 		System.out.println("\n");
-		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(showHomework));
+		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(printDaysAbsent));
 		System.out.println("\n");
-		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(showHomework));
+		studentsAbove18.forEach(increaseDaysAbsentByRandomAmount.andThen(printDaysAbsent));
 		System.out.println("\n");
 /*
 		Comparator<Student> byMostHomework = (s1, s2) -> s2.amountOfHomework - s1.amountOfHomework;

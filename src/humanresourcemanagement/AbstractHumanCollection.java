@@ -17,12 +17,12 @@ public abstract class AbstractHumanCollection {
 	
 	public abstract List<Human> sortHumansByName();
 	
-	public abstract List<Human> sortHumansByAge();
+	public abstract List<Human> sortHumansByAgeWithFunctionalInterface();
 	
 	public abstract List<Human> getAllStudents();
 	
 	public abstract List<Human> getAllStudentOlderThanAge(int age);
-
+	
 	public abstract List<Human> getAllHumansBornBeforeDateTimeWithLambdas(LocalDate date);
 
 }

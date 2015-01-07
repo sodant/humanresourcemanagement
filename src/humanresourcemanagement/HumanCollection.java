@@ -16,15 +16,12 @@ import java.util.stream.Collectors;
 
 /**
  * 
- * @author mick__000
+ * @author Mick Soudant
  * @author Rachèl Heimbach
  */
 public class HumanCollection extends AbstractHumanCollection {
 	
 	private Predicate<Human> 	isStudent = (h) -> h instanceof Student;
-	
-	private Comparator<Human> 	byAge = (h1, h2) -> h1.age - h2.age,
-								byName = (h1, h2) -> h1.name.compareTo(h2.name);
 
 	public HumanCollection(IHumanDataAdapter dataSource){		
 		super(dataSource);
@@ -32,11 +29,14 @@ public class HumanCollection extends AbstractHumanCollection {
 	
 	public List<Human> sortHumansByName(){
 		return this.humans.stream()
-				.sorted(byName)
+				.sorted((h1, h2) -> h1.name.compareTo(h2.name))
 				.collect(Collectors.toList());
 	}
 	
-	public List<Human> sortHumansByAge(){
+	public List<Human> sortHumansByAgeWithFunctionalInterface(){
+		
+		Comparator<Human> byAge = (h1, h2) -> h1.age - h2.age;
+		
 		return this.humans.stream()
 				.sorted(byAge)
 				.collect(Collectors.toList());
