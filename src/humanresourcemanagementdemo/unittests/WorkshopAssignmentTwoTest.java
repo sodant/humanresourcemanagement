@@ -4,11 +4,12 @@ import org.junit.Before;
 
 import humanresourcemanagement.AbstractHumanCollection;
 import humanresourcemanagement.data.HumanMockAdapter;
-import humanresourcemanagement.unittests.HumanCollectionTest;
+import humanresourcemanagement.unittests.AssignmentOneTest;
+import humanresourcemanagement.unittests.AssignmentThreeTest;
 import humanresourcemanagementdemo.WorkshopHumanCollection;
 
 
-public class WorkshopHumanCollectionTest extends HumanCollectionTest{
+public class WorkshopAssignmentTwoTest extends AssignmentThreeTest{
 	
 	AbstractHumanCollection testCollection;
 	

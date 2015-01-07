@@ -19,7 +19,7 @@ public abstract class AbstractHumanCollection {
 	
 	public abstract List<Human> sortHumansByAgeWithFunctionalInterface();
 	
-	public abstract List<Human> getAllStudents();
+	public abstract List<Human> getAllStudentsWithFunctionalInterface();
 	
 	public abstract List<Human> getAllStudentOlderThanAge(int age);
 	

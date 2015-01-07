@@ -85,7 +85,7 @@ public class HumanXmlAdapter implements IHumanDataAdapter {
 				return new Human(name, birthday);
 			case "student":
 				Student s = new Student(name, birthday);
-				s.daysAbsent = xmlHumans.getAttributeValue(element, "daysAbsent");
+				s.daysAbsent = Integer.parseInt(xmlHumans.getAttributeValue(element, "daysAbsent"));
 				return s;
 			case "teacher":
 				return new Teacher(name, birthday);

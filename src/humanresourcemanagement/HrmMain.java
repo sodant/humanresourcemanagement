@@ -90,7 +90,7 @@ public class HrmMain {
 		studentsAbove18.stream().filter(isALoser).forEach(printLoser);
 */
 
-		ArrayList<Human> filteredHumans = (ArrayList<Human>) this.humans.getAllStudents();
+		ArrayList<Human> filteredHumans = (ArrayList<Human>) this.humans.getAllStudentsWithFunctionalInterface();
 		filteredHumans.forEach(print);
 
 

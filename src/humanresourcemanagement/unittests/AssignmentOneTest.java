@@ -12,9 +12,9 @@ import humanresourcemanagement.HumanCollection;
 import humanresourcemanagement.data.HumanMockAdapter;
 import humanresourcemanagement.humans.Human;
 
-public class HumanCollectionTest {
+public class AssignmentOneTest {
 	
-	AbstractHumanCollection testCollection;
+	protected AbstractHumanCollection testCollection;
 	
 	@Before
 	public void initialize()
@@ -39,7 +39,7 @@ public class HumanCollectionTest {
 	
 	@Test
 	public void getAllStudentsTest(){
-		ArrayList<Human> allStudents = (ArrayList<Human>)testCollection.getAllStudents();
+		ArrayList<Human> allStudents = (ArrayList<Human>)testCollection.getAllStudentsWithFunctionalInterface();
 		assertEquals(true, true);
 	}
 	

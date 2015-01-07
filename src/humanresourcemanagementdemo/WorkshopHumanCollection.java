@@ -27,7 +27,7 @@ public class WorkshopHumanCollection extends AbstractHumanCollection {
 	}
 
 	@Override
-	public List<Human> getAllStudents() {
+	public List<Human> getAllStudentsWithFunctionalInterface() {
 		// TODO Auto-generated method stub
 		return null;
 	}
