@@ -33,7 +33,10 @@ public class HumanXmlAdapter implements IHumanDataAdapter {
 		ArrayList<Human> allHumans = null;
 		for(int i=0; i<humans.length; i++)
 		{
-			allHumans.addAll(getListOfHumans(humans[i]));
+			if(humans[i] != null)
+			{
+				allHumans.addAll(getListOfHumans(humans[i]));
+			}
 		}
 		return allHumans;
 	}
