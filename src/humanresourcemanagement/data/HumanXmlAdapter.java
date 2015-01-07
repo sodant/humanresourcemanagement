@@ -30,7 +30,7 @@ public class HumanXmlAdapter implements IHumanDataAdapter {
 	
 	private ArrayList<Human> combineHumanLists(NodeList... humans)
 	{
-		ArrayList<Human> allHumans = new ArrayList<Human>();
+		ArrayList<Human> allHumans = null;
 		for(int i=0; i<humans.length; i++)
 		{
 			if(humans[i] != null)
@@ -77,6 +77,14 @@ public class HumanXmlAdapter implements IHumanDataAdapter {
 		String bDay = xmlHumans.getAttributeValue(element, "birthday");
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		LocalDate birthday = LocalDate.parse(bDay, formatter);
-		return new Human(name, birthday);
+		switch (element.getTagName())
+		case "human":
+			return new Human(name, birthday);
+		case "student":
+			return new Student(name, birthday);
+		case "teacher":
+			return new Teacher(name, birthday);
+		case "deafault":
+			return null;
 	}
 }
