@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import humanresourcemanagement.data.HumanMockAdapter;
 import humanresourcemanagement.data.HumanXmlAdapter;
 import humanresourcemanagement.humans.Student;
 import humanresourcemanagement.humans.Human;
