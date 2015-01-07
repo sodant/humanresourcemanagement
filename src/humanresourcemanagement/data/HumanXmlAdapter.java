@@ -24,14 +24,40 @@ public class HumanXmlAdapter implements IHumanDataAdapter {
 		this.xmlHumans = new XMLDocument(path);		
 	}
 	public ArrayList<Human> getAllHumans() {
-		NodeList humanElements = getHumanElements();
-		return getListOfHumans(humanElements);
+		NodeList[] allHumanElements = getAllHumanElements();
+		return combineHumanLists(allHumanElements);
+	}
+	
+	private ArrayList<Human> combineHumanLists(NodeList... humans)
+	{
+		ArrayList<Human> allHumans = null;
+		for(int i=0; i<humans.length; i++)
+		{
+			allHumans.addAll(getListOfHumans(humans[i]));
+		}
+		return allHumans;
+	}
+	
+	private NodeList[] getAllHumanElements()
+	{
+		return new NodeList[] {getHumanElements(), getStudentElements(), getTeacherElements()};
 	}
 	
 	private NodeList getHumanElements()
 	{
 		return xmlHumans.getElementsByName("human");
 	}
+	
+	private NodeList getStudentElements()
+	{
+		return xmlHumans.getElementsByName("student");
+	}
+	
+	private NodeList getTeacherElements()
+	{
+		return xmlHumans.getElementsByName("teacher");
+	}
+	
 	
 	private ArrayList<Human> getListOfHumans(NodeList nodes)
 	{
