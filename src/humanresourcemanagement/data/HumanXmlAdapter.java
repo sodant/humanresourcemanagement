@@ -30,7 +30,7 @@ public class HumanXmlAdapter implements IHumanDataAdapter {
 	
 	private ArrayList<Human> combineHumanLists(NodeList... humans)
 	{
-		ArrayList<Human> allHumans = null;
+		ArrayList<Human> allHumans = new ArrayList<Human>();
 		for(int i=0; i<humans.length; i++)
 		{
 			if(humans[i] != null)
