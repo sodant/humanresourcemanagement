@@ -9,9 +9,7 @@ import humanresourcemanagement.unittests.AssignmentThreeTest;
 import humanresourcemanagementdemo.WorkshopHumanCollection;
 
 
-public class WorkshopAssignmentTwoTest extends AssignmentThreeTest{
-	
-	AbstractHumanCollection testCollection;
+public class WorkshopAssignmentTwoTest extends AssignmentThreeTest{	
 	
 	@Before
 	public void initialize()
