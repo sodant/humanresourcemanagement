@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import humanresourcemanagement.data.HumanMockAdapter;
+import humanresourcemanagement.data.HumanXmlAdapter;
 import humanresourcemanagement.humans.Student;
 import humanresourcemanagement.humans.Human;
 
@@ -22,7 +23,7 @@ public class HrmMain {
 	}
 
 	public HrmMain(){
-		HumanMockAdapter dataSource = new HumanMockAdapter();
+		HumanXmlAdapter dataSource = new HumanXmlAdapter("data/humans.xml");
 		this.humans = new HumanCollection(dataSource);
 	}
 

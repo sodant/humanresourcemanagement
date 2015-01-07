@@ -12,6 +12,13 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+
+
+/**
+ * 
+ * @author mick__000
+ * @author Rachèl Heimbach
+ */
 public class HumanCollection extends AbstractHumanCollection {
 	
 	private Predicate<Human> 	isStudent = (h) -> h instanceof Student,

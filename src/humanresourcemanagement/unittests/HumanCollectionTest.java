@@ -12,7 +12,6 @@ import humanresourcemanagement.HumanCollection;
 import humanresourcemanagement.data.HumanMockAdapter;
 import humanresourcemanagement.humans.Human;
 
-
 public class HumanCollectionTest {
 	
 	AbstractHumanCollection testCollection;
