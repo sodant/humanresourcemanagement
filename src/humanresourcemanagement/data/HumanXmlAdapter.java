@@ -14,6 +14,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import humanresourcemanagement.humans.Human;
+import humanresourcemanagement.humans.Student;
+import humanresourcemanagement.humans.Teacher;
 
 public class HumanXmlAdapter implements IHumanDataAdapter {
 
@@ -30,7 +32,7 @@ public class HumanXmlAdapter implements IHumanDataAdapter {
 	
 	private ArrayList<Human> combineHumanLists(NodeList... humans)
 	{
-		ArrayList<Human> allHumans = null;
+		ArrayList<Human> allHumans = new ArrayList<Human>();
 		for(int i=0; i<humans.length; i++)
 		{
 			if(humans[i] != null)
@@ -78,13 +80,16 @@ public class HumanXmlAdapter implements IHumanDataAdapter {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		LocalDate birthday = LocalDate.parse(bDay, formatter);
 		switch (element.getTagName())
-		case "human":
-			return new Human(name, birthday);
-		case "student":
-			return new Student(name, birthday);
-		case "teacher":
-			return new Teacher(name, birthday);
-		case "deafault":
-			return null;
+		{					
+			case "human":
+				return new Human(name, birthday);
+			case "student":
+				return new Student(name, birthday);
+			case "teacher":
+				return new Teacher(name, birthday);
+			default:
+				return null;
+		}
+
 	}
 }

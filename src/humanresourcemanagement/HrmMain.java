@@ -92,7 +92,7 @@ public class HrmMain {
 		studentsAbove18.stream().filter(isALoser).forEach(printLoser);
 */
 
-		ArrayList<Human> filteredHumans = (ArrayList) this.humans.getAllHumansBornBeforeDateTimeWithLambdas(LocalDate.of(1994,02,2));
+		ArrayList<Human> filteredHumans = (ArrayList<Human>) this.humans.getAllStudents();
 		filteredHumans.forEach(print);
 
 
