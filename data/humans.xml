@@ -53,21 +53,21 @@
 	<student birthday="01-01-1991" name="Mats Boterlik" />  
 	<student birthday="22-01-1988" name="Steffen Chaque" />  
 	<student birthday="01-01-1976" name="Sjon Laffer" />  
-	<student birthday="01-01-1992" name="Mats Boterlik" />  
-	<student birthday="01-01-1991" name="Mats Boterlik" />  
+	<student birthday="01-01-1992" name="Piet Claassen" />  
+	<student birthday="01-01-1991" name="Kees Boterlik" />  
 	<student birthday="01-01-1994" name="Mats Boterlik" />  
-	<student birthday="01-01-1995" name="Mats Boterlik" />  
-	<student birthday="01-01-1979" name="Mats Boterlik" />  
-	<student birthday="01-01-1987" name="Mats Boterlik" />  
-	<student birthday="01-01-1992" name="Mats Boterlik" />  
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
-	<teacher birthday="02-02-1970" name="Ruurd Zwaktes" />
+	<student birthday="01-01-1995" name="Laura Jansen" />  
+	<student birthday="01-01-1979" name="Lars Sral" />  
+	<student birthday="01-01-1987" name="Stam Jaap" />  
+	<student birthday="01-01-1992" name="Henk Meister" />  
+	<teacher birthday="02-02-1972" name="Yi Yu" />
+	<teacher birthday="02-02-1943" name="Luna Atlantis" />
+	<teacher birthday="02-02-1967" name="Arie Banaan" />
+	<teacher birthday="02-02-1954" name="Erik Appel" />
+	<teacher birthday="02-02-1952" name="Ruud Kiwi" />
+	<teacher birthday="02-02-1930" name="Sjoerd Stoer" />
+	<teacher birthday="02-02-1983" name="Lotte Engels" />
+	<teacher birthday="02-02-1980" name="Lisa Mona" />
+	<teacher birthday="02-02-1990" name="Lex Schaapenwoller" />
+	<teacher birthday="02-02-1952" name="Irene De Leraar" />
 </humans>
